@@ -10,7 +10,7 @@ import {
 
 function App() {
   return (
-    <main className={`flex relative  dark:bg-gray-900 bg-gray-200  justify-center flex-col items-center h-screen `}>
+    <main className={`flex relative py-2 dark:bg-gray-900 bg-gray-200  justify-center flex-col items-center h-screen `}>
       <HomeLayout>
         <Title className={"text-3xl sm:text-5xl"}>
           My Todos

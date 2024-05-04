@@ -18,7 +18,7 @@ export default function NoAct() {
         showClicked ?
           <Spinner className="h-20 w-20 text-gray-800/25"/>
           :
-          <h1 className="text-2xl dark:text-gray-600 text-gray-500">{listStrings}</h1>
+          <h1 className="text-lg dark:text-gray-600 text-gray-500">{listStrings}</h1>
       }
     </div>
   </>

@@ -12,10 +12,10 @@ const Title = ({ children, className }) => {
   return (
     <div className={` title todo flex my-2 items-end justify-between border-b `}>
       <h1 className={`${className}  font-kanit mb-2  dark:text-gray-300 font-medium text-gray-800`}>{children}</h1>
-      <div className="flex flex-row sm:flex-col items-end">
+      <div className="flex flex-row-reverse sm:flex-col items-end">
         <div className="flex "  onClick={clickedButton}>
           {showClicked ? 
-            <Alert  variant="ghost" className=" text-xs py-3  dark:bg-gray-800 dark:text-gray-400">
+            <Alert  variant="ghost" className=" text-xs py-3  absolute left-0 top-0 dark:bg-gray-800 dark:text-gray-400">
               Theme Changed!</Alert> : ""}
 
           <ThemeBtn className={'text-gray-900 dark:text-gray-400 px-1 text-2xl mx-1'} variant={'text'} />
