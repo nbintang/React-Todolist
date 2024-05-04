@@ -10,7 +10,7 @@ import {
 
 function App() {
   return (
-    <main className={`flex relative py-2 dark:bg-gray-900 bg-gray-200  justify-center flex-col items-center h-screen `}>
+    <main className={`flex static justify-center py-2 flex-col items-center  dark:bg-gray-900 bg-gray-200 h-full sm:h-screen pb-2`}>
       <HomeLayout>
         <Title className={"text-3xl sm:text-5xl"}>
           My Todos
@@ -18,12 +18,12 @@ function App() {
         <div className="wrapper">
           <Input />
           <ListSlide />
-          <div className="wrap-list no-scrollbar overflow-auto h-96 sm:h-[450px] ">
+          <div className="wrap-list no-scrollbar overflow-auto h-[390px] sm:h-[450px] ">
             <SliderPages />
           </div>
         </div>
       </HomeLayout>
-      <div>
+      <div className="py-2">
         <Footer />
       </div>
     </main>

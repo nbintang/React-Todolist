@@ -12,8 +12,8 @@ const CompletePages = ({ item, index }) => {
       <div className="todo-list-item border p-2 w-full rounded border-gray-400 my-2 flex flex-col justify-between" >
         <div className="mt-2">
 
-          <h3 className="task font-ptsans border-b border-gray-300 text-2xl cursor-not-allowed dark:text-gray-300 text-gray-900">{item.title}</h3>
-          <p className="description font-ptsans cursor-not-allowed dark:text-gray-300 text-gray-900">{item.desc}</p>
+          <h3 className="task font-ptsans border-b border-gray-300 text-2xl cursor-not-allowed dark:text-gray-300 text-gray-900  ml-1">{item.title}</h3>
+          <p className="description font-ptsans cursor-not-allowed dark:text-gray-300 text-gray-900 mt-1 ml-2">{item.desc}</p>
         </div>
         <div className="flex justify-between items-end">
           <p className="text-xs font-kanit dark:text-gray-400 text-gray-700">{item.id}</p>
