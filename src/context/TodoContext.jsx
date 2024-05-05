@@ -32,9 +32,9 @@ export default function TodoProvider({ children }) {
     };
     let addTodos = [...allTodos];
     if (list.title === "") {
-      alert("please fill the list!");
+      alert("please fullfill the list!");
     } else if (list.desc === "") {
-      alert("please fill the desc");
+      alert("please fullfill the desc");
     } else {
       addTodos.push(list);
       localStorage.setItem('todolist', JSON.stringify(addTodos));
@@ -91,7 +91,7 @@ export default function TodoProvider({ children }) {
     let newTodos = [...allTodos];
     newTodos[currentEdit] = { ...editedItem, date: dates + " (Edited)" };
     if (editedItem.title === "" || editedItem.desc === "") {
-      alert("Please fill the List!")
+      alert("Please fullfill the List!")
     } else {
       setAllTodos(newTodos);
       setCurrentEdit(-1);
