@@ -54,7 +54,6 @@ const TodoPages = ({ item, index }) => {
           <FiEdit2 />
         </IconButton>
       </div>
-
     </div>
   )
 }

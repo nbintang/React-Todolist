@@ -16,7 +16,7 @@ export default function NoAct() {
     <div className={`h-full w-full md:h-full bg-gray-300 dark:bg-gray-800  rounded-md grid place-items-center`}>
       {
         showClicked ?
-          <Spinner className="h-20 w-20 text-gray-800/25"/>
+          <Spinner className="h-12 w-12 sm:w-20 sm:h-20 text-gray-800/25"/>
           :
           <h1 className="text-lg dark:text-gray-600 text-gray-500">{listStrings}</h1>
       }
