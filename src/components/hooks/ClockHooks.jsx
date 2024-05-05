@@ -10,7 +10,7 @@ export default function Clock({ className }) {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [time]);
 
 
   return <h1 className={className}>{time.toString().replaceAll(".", ":")}</h1>

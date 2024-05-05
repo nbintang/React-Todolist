@@ -23,8 +23,8 @@ const TodoPages = ({ item, index }) => {
       
         <div className="mt-2 ">
       
-          <div className="flex justify-between border-b">
-            <h3 className="task font-ptsans  border-gray-300 text-2xl dark:text-gray-300 text-gray-900">{item.title}</h3>
+          <div className="flex justify-between dark:border-gray-300 border-gray-400 border-b">
+            <h3 className="task font-ptsans   text-2xl dark:text-gray-300 text-gray-900">{item.title}</h3>
             <IconButton className={`ml-1 mb-2 ${displayScreen[item.id] ? "opacity-50": "opacity-100"} text-xl hover:shadow-sm`} onClick={() => handleOpen(item.id)}>
               {displayScreen[item.id] ?
                 <VscTriangleRight  />

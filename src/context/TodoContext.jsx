@@ -101,9 +101,10 @@ export default function TodoProvider({ children }) {
   useEffect(() => {
     const saveTodos = JSON.parse(localStorage.getItem('todolist'));
     const saveComplete = JSON.parse(localStorage.getItem('completelist'));
+    // console.log(saveTodos)
     if (saveTodos) setAllTodos(saveTodos);
     if (saveComplete) setCompleteTodos(saveComplete);
-  }, []);
+  }, [localStorage.getItem('todolist'), localStorage.getItem('completelist')]);
 
   return (
     <TodoContext.Provider
