@@ -1,5 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 import Dates from "../components/hooks/DatesHooks";
+import toast from "react-hot-toast";
 
 export const TodoContext = createContext();
 
@@ -31,10 +32,8 @@ export default function TodoProvider({ children }) {
       date: dates
     };
     let addTodos = [...allTodos];
-    if (list.title === "") {
-      alert("please fullfill the list!");
-    } else if (list.desc === "") {
-      alert("please fullfill the desc");
+    if (list.title === "" || list.desc === "") {
+      toast.error("Make sure you fulfill the list!");
     } else {
       addTodos.push(list);
       localStorage.setItem('todolist', JSON.stringify(addTodos));
@@ -91,7 +90,7 @@ export default function TodoProvider({ children }) {
     let newTodos = [...allTodos];
     newTodos[currentEdit] = { ...editedItem, date: dates + " (Edited)" };
     if (editedItem.title === "" || editedItem.desc === "") {
-      alert("Please fullfill the List!")
+      toast.error("Make sure you fulfill the list!");
     } else {
       setAllTodos(newTodos);
       setCurrentEdit(-1);

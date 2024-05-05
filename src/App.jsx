@@ -7,6 +7,7 @@ import {
   HomeLayout
 } from "./components/export/ExportModule";
 import SkeletonLayout from "./components/Layout/Skeleton";
+import { Toaster } from "react-hot-toast";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <main className={`flex static justify-start sm:justify-center py-2 flex-col items-center  dark:bg-gray-900 bg-gray-200 h-[110vh] sm:h-screen pb-2`}>
       <SkeletonLayout className={''}>
         <HomeLayout>
+          <Toaster position="bottom-left" reverseOrder={false}/>
           <Title className={"text-3xl sm:text-5xl"}>
             My Todos
           </Title>

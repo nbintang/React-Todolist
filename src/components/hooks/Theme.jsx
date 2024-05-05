@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 export default function useDarkMode() {
   const [themeMode, setThemeMode] = useState(() => {
@@ -14,6 +15,27 @@ export default function useDarkMode() {
   const toggleTheme = () => {
     setThemeMode(prevTheme => {
       const newTheme = prevTheme === "light" ? "dark" : "light";
+      if(newTheme === "dark") toast('Darkness, my old friend!',
+    {
+      icon: '🦇',
+      style: {
+        borderRadius: '10px',
+        background: '#333',
+        color: '#fff',
+      },
+    }
+  );
+
+  if(newTheme === 'light')  toast('Light, my healer...',
+  {
+    icon: '🕊️',
+    style: {
+      borderRadius: '10px',
+      background: '#ffff',
+      color: '#777',
+    },
+  }
+);
       localStorage.setItem('theme', newTheme);
       return newTheme
     });
@@ -22,7 +44,9 @@ export default function useDarkMode() {
   useEffect(() => {
     window.document.querySelector("html").classList.remove('dark', 'light');
     window.document.querySelector("html").classList.add(themeMode);
+    
     getThemeFromLocalStorage();
+
   }, [themeMode]);
 
 
