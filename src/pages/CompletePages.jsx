@@ -8,8 +8,8 @@ const CompletePages = ({ item, index }) => {
   } = useContext(TodoContext);
 
   return (
-    <div className="todo-list flex h-56 my-2" key={index}>
-      <div className="todo-list-item border p-2 w-full rounded dark:border-gray-300 border-gray-400 my-2 flex flex-col justify-between" >
+    <div className="todo-list flex h-56 my-2 ml-2" key={index}>
+      <div className="todo-list-item border p-2 w-full rounded dark:border-gray-300 bg-gray-200 dark:bg-gray-400/25 border-gray-400 my-2 flex flex-col justify-between" >
         <div className="mt-2">
 
           <h3 className="task font-ptsans border-b dark:border-gray-300 border-gray-400 text-2xl cursor-not-allowed dark:text-gray-300 text-gray-900  ml-1">{item.title}</h3>

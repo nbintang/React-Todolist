@@ -10,7 +10,6 @@ import {
 import SkeletonLayout from "../components/Layout/Skeleton";
 
 export default function SliderPages() {
-
   const {
     completeScreen,
     allTodos,
@@ -27,7 +26,9 @@ export default function SliderPages() {
             currentEdit === index ? (
               <EditPages key={index} />
             ) : (
-              <SkeletonLayout key={index}><TodoPages key={index} index={index} item={item} /></SkeletonLayout>
+              <SkeletonLayout key={index}>
+                <TodoPages key={index} index={index} item={item} />
+                </SkeletonLayout>
             )
           ))
         ) : (

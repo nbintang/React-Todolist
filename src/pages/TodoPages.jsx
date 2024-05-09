@@ -17,9 +17,9 @@ const TodoPages = ({ item, index }) => {
   } = useContext(TodoContext);
   
   return (
-    <div className="todo-list flex h-56 my-2 justify-between " key={index}   >
+    <div className="todo-list flex h-56 mx-2  my-2 justify-between " key={index}   >
       
-      <div className={`todo-list-item border dark:border-gray-300 border-gray-400 rounded p-2  duration-200 transition-all ${displayScreen[item.id] ? "w-[92%]" :"w-full"} flex flex-col justify-between`} >
+      <div className={`todo-list-item border dark:border-gray-300 border-gray-400 bg-gray-200 dark:bg-gray-400/25 rounded p-2  duration-200 transition-all ${displayScreen[item.id] ? "w-[92%]" :"w-full"} flex flex-col justify-between`} >
       
         <div className="mt-2 ">
       

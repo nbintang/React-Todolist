@@ -13,7 +13,7 @@ export default function NoAct() {
     }, 500);
   }, [listStrings]);
   return <>
-    <div className={`h-full w-full md:h-full bg-gray-300 dark:bg-gray-800  rounded-md grid place-items-center`}>
+    <div className={`h-full w-full md:h-full   rounded-md grid place-items-center`}>
       {
         showClicked ?
           <Spinner className="h-12 w-12 sm:w-20 sm:h-20 text-gray-800/25"/>
