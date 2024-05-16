@@ -11,8 +11,6 @@ export default function Clock({ className }) {
       clearInterval(timer);
     };
   }, [time]);
-
-
   return <h1 className={className}>{time.toString().replaceAll(".", ":")}</h1>
 }
 

@@ -21,7 +21,7 @@ const CompletePages = ({ item, index }) => {
         </div>
       </div>
       <div className="mb-2 mx-2 flex items-end">
-        <IconButton onClick={() => handleDeleteComplete(index)}>
+        <IconButton className="dark:bg-gray-300/75 dark:text-gray-800" onClick={() => handleDeleteComplete(index)}>
           <span><PiTrashFill /></span>
         </IconButton>
       </div>

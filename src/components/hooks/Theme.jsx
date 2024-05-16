@@ -44,11 +44,8 @@ export default function useDarkMode() {
   useEffect(() => {
     window.document.querySelector("html").classList.remove('dark', 'light');
     window.document.querySelector("html").classList.add(themeMode);
-    
     getThemeFromLocalStorage();
-
   }, [themeMode]);
-
-
+  
   return { themeMode, toggleTheme };
 };

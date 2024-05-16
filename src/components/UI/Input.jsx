@@ -36,7 +36,7 @@ const InputUi = () => {
           <Input variant="standard" label="What's Your Activity?" onKeyDown={handleAddKey} type="text" className="input text-gray-700 dark:text-gray-200"  value={description} onChange={(e) => setDescription(e.target.value)} />
         </div>
       </div>
-      <ButtonUi type="button" className="btn w-full md:w-20 bg-gray-800 rounded  my-0 " onClick={handleAdd}  >Add</ButtonUi>
+      <ButtonUi type="button" className="btn w-full md:w-20 bg-gray-800 rounded dark:text-gray-800 my-0 dark:bg-gray-400 font-bold" onClick={handleAdd}  >Add</ButtonUi>
     </div>
   )
 };
