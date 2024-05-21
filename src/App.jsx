@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Title,
   Input,
@@ -7,9 +8,14 @@ import {
   HomeLayout
 } from "./components/export/ExportModule";
 import SkeletonLayout from "./components/Layout/Skeleton";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
+  useEffect(()=> {
+    toast.success("Welcome to TodoList!", {
+      position:"top-center"
+    })
+  }, [])
   return (
     <main className={`flex static justify-start sm:justify-center py-2 flex-col items-center  dark:bg-gray-900 bg-gray-200 h-full sm:h-screen pb-2`}>
       <SkeletonLayout className={''}>
